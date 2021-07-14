@@ -1,0 +1,380 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+    /* box-sizing: border-box, si se define un elemento con un ancho de 100 pixeles.
+       Esos 100 pixeles incluíran cualquier borde o relleno que se añadan, y 
+       la caja de contenido se encogerá para absorber ese ancho extra. 
+       Esto típicamente hace mucho más fácil dimensionar elementos.
+       Mas info: https://developer.mozilla.org/es/docs/Web/CSS/box-sizing
+       */
+  *, ::after, ::before {
+    
+    box-sizing: border-box; 
+  }
+  
+  html{
+    
+    width: 100vw;
+    height: 100vh;
+  }
+  /*
+La propiedad «background-size: cover» nos permite aumentar el tamaño de la imagen de fondo,
+ en lugar de que nos muestre la imagen varias veces.
+ Mas info en el siguiente link : http://dissenyaweb.com/blog/diseno_web/como-hacer-que-la-imagen-de-fondo-se-adapte-al-tamano-de-la-pantalla-con-css3/
+*/
+
+  body {
+   
+    width: 100vw;
+    height: 100vh;
+    background: url("https://lh6.googleusercontent.com/proxy/MdXBfxi4vCF0ZKalCD1XFNnrumrgr3DoIIwdqaPlZG9Q0K4hUVQQUGfBnqzm3-jY1EJEREorVqCj7TUKyEqhPiz32FyE051g9G8sMKhGdyM=w3840-h2160-p-k-no-nd-mv") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+/* Barra de Navegacion */
+
+.nav{
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.nav ul{
+    display: flex;
+    margin-top: 25px;
+    align-items: center;  
+   /* justify-content: center;*/
+}
+
+.nav nav li{
+    list-style: none;
+    padding: 6px;
+}
+
+.nav nav a{
+    text-decoration: none;
+    color: white;
+    margin-right: 7px;
+
+}
+
+#user{
+    border-radius: 100%;
+}
+
+#user:hover {
+   
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.741); 
+}
+
+#apps:hover {
+   
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.741);  
+}
+ 
+.nav nav a:hover{
+    text-decoration: underline;
+}
+  /* Fin Barra de Navegacion */
+
+
+  /*Logo de Google*/
+main{
+    width: 100vw;
+  
+    text-align: center;
+    margin-top: 11%;
+  }
+  
+.logo{
+box-sizing: border-box; 
+display: block;
+text-align: center;
+}
+
+.section-logo{
+margin-bottom: 20px;
+}
+
+.section-logo img{
+    width: 300px;
+}
+
+/* Fin Logo de Google*/
+  
+
+/* Buscador*/
+main .section-search{  
+   margin-bottom:20px;
+   display: flex;
+   justify-content: center;
+   
+} 
+
+main .section-search-container{
+    background-color: white;
+    width: 570px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main .section-search-container:hover{
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+
+
+main .section-search input{
+   
+border: none;
+outline: none;
+width: 450px;
+height: 35px;
+color: #898989;
+}
+
+main .section-search .search-icon{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
+    background-repeat: no-repeat;
+    background-position:initial;
+    background-size: contain;
+    margin-right: 5px;
+    width: 18px;
+    height:18px;
+    
+}
+
+main .section-search .voice-icon{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    
+}
+    
+
+ /* End  Buscador*/
+   
+
+/* Apps*/
+.section-apps{
+    width: 100vw;
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+
+ .section-apps-img img{
+
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+    margin:0 0 0 35px ;
+    
+  }
+  
+ 
+.section-apps-names p {
+    display: inline-block;
+    color: white;
+   /* margin: 10px;*/
+    margin: 23px;
+
+}
+
+/* Ends Apps*/
+
+
+ /* Links*/
+
+ footer{
+    width: 100vw;
+    position: absolute;
+    bottom: 25px;
+}
+
+footer ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+footer nav img{
+   margin-right: 9px;
+
+}
+
+footer nav a{
+
+   color: white;
+
+}
+
+
+footer ul li {
+   font-weight: bold;
+    color: white;
+    list-style: none;
+ 
+}
+
+
+ /* End  Links*/
+
+
+
+
+@media (max-width: 500px) {
+
+    body {
+        box-sizing: border-box; 
+        width: 100vw;
+        height: 100vh;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+    main{
+    width: 100%;
+       margin-left: 5%;;
+    }
+
+    .nav{
+        width: 100vw;
+        height: 60px; 
+    }
+    
+
+    .nav nav li{   
+        padding: 6px;
+    }
+    
+   
+
+    .logo{
+        box-sizing: border-box; 
+        width:90vw;
+        
+    }
+
+    .section-logo img{
+        width:200px;
+    }
+       
+
+   
+    main .section-search{
+        box-sizing: border-box; 
+        width: 90vw;
+        margin-bottom:20px;         
+    } 
+       
+    main .section-search-container{        
+        width: 85vw;      
+    }
+               
+    main .section-search input{       
+        border: none;
+        outline: none;
+        width: 70vw;
+        height: 35px;
+        color: #898989;
+    }
+        
+    main .section-search .search-icon{          
+        margin-right: 5px;
+        width: 14px;
+        height:14px;
+            
+    }
+        
+    main .section-search .voice-icon{   
+        width: 14px;
+        height: 14px;                 
+    }
+            
+        
+    .section-apps{    
+        box-sizing: border-box; 
+        width: 100%;
+    }
+
+    .section-apps-img img{
+        display: initial;
+        width: 29px;
+        height: 29px;      
+               
+    }
+
+    .section-apps-names p {
+       margin: 10px;
+    
+    }
+
+
+    footer{
+       
+        position: absolute;
+        bottom: 50px;
+    }
+   
+    footer ul{
+        width: 90%;
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+      
+    }
+
+    footer ul li img {
+      margin-right: 5px;
+      
+    }
+   
+   
+    footer nav img{
+       margin-right: 0px;
+   
+   }
+   
+  
+
+}
+  
+
+
+
+
+
+
+
